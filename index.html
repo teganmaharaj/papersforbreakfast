@@ -89,6 +89,7 @@
 This paper proposes instead to learn (unsupervised) a mapping from source domain to target domain (e.g. sim to real) images, and train on that. They use a GAN to learn the mapping in pixel space, and then train on target and generated images.  </p>
 <p>
 They do experiments on MNIST -> USPS (I hadn't heard of it before; looks like MNIST with blur-sharpened edges), MNIST-> MNIST_M (coloured MNIST on natural-ish backgrounds), and Linemod (object recognition and pose estimation in cluttered scenes; ~100 000 rendered and 1000 real). I'm not very familiar with these as benchmarks, but they all seem quite small. Their method is able to outperform the 'Target-only" benchmark (i.e. don't use the source data, don't do domain adaptation), which is apparently difficult to achieve. </p>
+
 <p>
 Overall, the method sounds very appealing to me; I like the concept, but feel like there need to be larger/maybe differently-designed benchmarks to really compare different methods. I find it discouraging in general to know that it's difficult to improve over 'target-only' methods. It feels like this shouldn't be the case, but I guess this is just the story of semi-supervised learning at the moment. I wonder if this is more/mostly to do with:  </p>
 <ol>
@@ -99,6 +100,8 @@ Overall, the method sounds very appealing to me; I like the concept, but feel li
 	<li>something mysteriously difficult about semisupervised learning that is not currently understood
 	<li>something else?	</li>	
 </ol>
+						<p>
+				They also make an interesting and easy-to-miss connection with InfoGAN in the appendix. If you use their approach for classification, like InfoGAN, it amounts to a variational method for maximizing the mutual information between the predicted class and generated/source images.
 			
 			
     		</div><!-- /.blurb -->
