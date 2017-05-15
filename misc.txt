@@ -1,0 +1,5 @@
+Quick-ish way to transfer figs from one paper to another with overleaf (possibly sharelatex):
+Click the picture so that you're viewing it, 
+Right-click it and choose 'open image in a new tab'
+Copy that new tab's url
+Go to your other project and in the dropdown beside 'files' choose 'url' and paste the url
