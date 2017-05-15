@@ -65,6 +65,7 @@
     		<ul>
         		<li><a href="/">Home</a></li>
 	        	<li><a href="/about">About</a></li>
+			<li><a href="/blog">Blog</a></li>
         		<li><a href="/other_res">Other resources</a></li>
     		</ul>
 		</nav>
@@ -76,13 +77,43 @@
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
     
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Networks</h1>
+			<p><a href="https://arxiv.org/abs/1612.05424"></a></p>
+		
+			<p>Domain adaptation is a problem setup where you have a lot of labelled data in a "source domain" (e.g. a simulator, synthesizer, white-background product photos, etc.), and a small amount of/expensive labelled data in a "target domain" (e.g. a real robot, real speech, natural images), and you want to be able to learn from the source domain and generalize to the target domain. </p>
+<p>
+ Prior work focused a lot on learning domain-invariant features which would be equally applicable to both source and target, usually suffering a loss in performance as you take a source-trained model and apply it to the target domain. </p>
+<p>
+This paper proposes instead to learn (unsupervised) a mapping from source domain to target domain (e.g. sim to real) images, and train on that. They use a GAN to learn the mapping in pixel space, and then train on target and generated images.  </p>
+<p>
+They do experiments on MNIST -> USPS (I hadn't heard of it before; looks like MNIST with blur-sharpened edges), MNIST-> MNIST_M (coloured MNIST on natural-ish backgrounds), and Linemod (object recognition and pose estimation in cluttered scenes; ~100 000 rendered and 1000 real). I'm not very familiar with these as benchmarks, but they all seem quite small. Their method is able to outperform the 'Target-only" benchmark (i.e. don't use the source data, don't do domain adaptation), which is apparently difficult to achieve. </p>
+<p>
+Overall, the method sounds very appealing to me; I like the concept, but feel like there need to be larger/maybe differently-designed benchmarks to really compare different methods. I find it discouraging in general to know that it's difficult to improve over 'target-only' methods. It feels like this shouldn't be the case, but I guess this is just the story of semi-supervised learning at the moment. I wonder if this is more/mostly to do with:  </p>
+<ol>
+	<li>benchmark dataset size	</li>
+	<li>evaluation criteria/task setup 	</li>
+	<li>model architecture	</li>
+	<li>combination of the above, indicating that we're currently overfitting on maybe a lot of tasks in a way that is maybe difficult to measure 	</li>
+	<li>something mysteriously difficult about semisupervised learning that is not currently understood
+	<li>something else?	</li>	
+</ol>
+			
+			
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		
+		<!--
     <div class="container">
     		<div class="blurb">
         		<h1>Inferring and Executing Programs for Visual Reasoning</h1>
-				<p><a href="https://arxiv.org/abs/1705.03633"></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-    
+			<p><a href="https://arxiv.org/abs/1705.03633"></a></p> -->
+    		<!--</div> /.blurb -->
+		<!--</div> /.container -->
+		
+		
+		
 		<footer>
     		<ul>
         		<li><a href="mailto:tegan.maharaj@gmail.com">email</a></li>
