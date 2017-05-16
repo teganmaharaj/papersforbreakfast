@@ -30,6 +30,10 @@
 			    font-size: 3em;
 			    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 			}
+			h2 {
+			    font-size: 2em;
+			    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			}
 			p {
 			    font-size: 1.5em;
 			    font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -55,7 +59,8 @@
 			}
 			div.blurb {
 			    background-color: #ffffff;
-			    width: 70%;
+			    width: 75%;
+		            padding: 10%;
 			}
 			
 		</style>
@@ -92,17 +97,18 @@ They do experiments on MNIST -> USPS (I hadn't heard of it before; looks like MN
 
 <p>
 Overall, the method sounds very appealing to me; I like the concept, but feel like there need to be larger/maybe differently-designed benchmarks to really compare different methods. I find it discouraging in general to know that it's difficult to improve over 'target-only' methods. It feels like this shouldn't be the case, but I guess this is just the story of semi-supervised learning at the moment. I wonder if this is more/mostly to do with:  </p>
-<ol>
+<p><ol>
 	<li>benchmark dataset size	</li>
 	<li>evaluation criteria/task setup 	</li>
 	<li>model architecture	</li>
 	<li>combination of the above, indicating that we're currently overfitting on maybe a lot of tasks in a way that is maybe difficult to measure 	</li>
 	<li>something mysteriously difficult about semisupervised learning that is not currently understood
 	<li>something else?	</li>	
-</ol>
+			</ol>
+			</p>
 						<p>
 				They also make an interesting and easy-to-miss connection with InfoGAN in the appendix. If you use their approach for classification, like InfoGAN, it amounts to a variational method for maximizing the mutual information between the predicted class and generated/source images.
-			
+			</p>			
 			
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
