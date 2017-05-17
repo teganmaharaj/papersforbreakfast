@@ -41,9 +41,9 @@
 			    color: #333;
 			}
 			p {
-			    font-size: 1em;
+			    font-size: 1.3em;
 			    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-			    line-height: .9em;
+			    line-height:1.3em;
 			    color: #333;
 			}
 			footer {
@@ -85,7 +85,8 @@
     		<div class="title_blurb">
         		<h1>Papers for Breakfast</h1>
 				<p2>Full of science-fibre; a delicious and digestible way to start your day!</p2>
-    		</div><!-- /.blurb -->
+			<p2> </p2>
+			</div><!-- /.blurb -->
 		</div><!-- /.container -->
     
 		<div class="container">
@@ -103,15 +104,15 @@ They do experiments on MNIST -> USPS (I hadn't heard of it before; looks like MN
 
 <p>
 Overall, the method sounds very appealing to me; I like the concept, but feel like there need to be larger/maybe differently-designed benchmarks to really compare different methods. I find it discouraging in general to know that it's difficult to improve over 'target-only' methods. It feels like this shouldn't be the case, but I guess this is just the story of semi-supervised learning at the moment. I wonder if this is more/mostly to do with:  </p>
-<p><ol>
+<ul>
 	<li>benchmark dataset size	</li>
 	<li>evaluation criteria/task setup 	</li>
 	<li>model architecture	</li>
 	<li>combination of the above, indicating that we're currently overfitting on maybe a lot of tasks in a way that is maybe difficult to measure 	</li>
 	<li>something mysteriously difficult about semisupervised learning that is not currently understood
 	<li>something else?	</li>	
-			</ol>
-			</p>
+			</ul>
+			
 						<p>
 				They also make an interesting and easy-to-miss connection with InfoGAN in the appendix. If you use their approach for classification, like InfoGAN, it amounts to a variational method for maximizing the mutual information between the predicted class and generated/source images.
 			</p>			
@@ -127,7 +128,7 @@ Overall, the method sounds very appealing to me; I like the concept, but feel li
     		<!--</div> /.blurb -->
 		<!--</div> /.container -->
 		
-		
+	
 		
 		<footer>
     		<ul>
